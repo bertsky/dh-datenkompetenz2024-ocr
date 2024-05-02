@@ -468,7 +468,7 @@ count: false
 
 ---
 
-# Texterkennung: Zeichenorientierte Ansätze
+# Texterkennung: <u>Zeichen</u>orientierte Ansätze
 
 .cols[
 .seventy[
@@ -676,7 +676,7 @@ count: false
 
 # Texterkennung: Werkzeuge
 
-- Software
+- Software (Engines)
     + [**Tesseract**](https://github.com/tesseract-ocr/tesseract): komplettes Open-Source-Paket
         * regelbasierte Bildvorverarbeitung und Layouterkennung
         * datengetriebene Texterkennung (unterstützt > 100 Sprachen)
@@ -687,87 +687,55 @@ count: false
         * datengetriebene Texterkennung (nur sehr wenige Modelle vorhanden)
         * für OCR (und HTR) verwendbar
         * prominente Ableger: [**Kraken**](https://kraken.re) und [**Calamari**](https://github.com/Calamari-OCR/calamari)
+    + [HTR+](https://readcoop.eu/wp-content/uploads/2018/12/D7.9_HTR_NN_final.pdf), [PyLaia](https://github.com/jpuigcerver/PyLaia/)...
+    + [TrOCR](https://github.com/microsoft/unilm)...
+<!--    + Google, Amazon, Microsoft... -->
+
+---
+
+# Texterkennung: Werkzeuge
+
+- Software (Platforms)
     + [**OCR-D**](https://ocr-d.de/): Workflow-Engine
         * Orchestrierung verschiedener Open-Source-Pakete zu stabilen Workflows
         * gleichzeitig DFG-Förderprogramm zur Verbesserung von OCR für historische Drucke
         * SLUB als maßgebliche Entwicklungseinrichtung
+    + [Transkribus](https://www.transkribus.org/)
+    + [OCR4all](https://github.com/OCR4all/)
+    + [eScriptorium](https://gitlab.com/scripta/escriptorium)
+    + [Wikimedia OCR](https://ocr-test.wmcloud.org/)
 
 ---
 
-# Texterkennung: Tesseract
+# Texterkennung: OCR mit Wikimedia
 
-- mit großem Abstand: verbreitetste OCR-Software
-    + Einsatz in unzähligen Apps, Forschungsprojekten, privaten Kontexten
-- kostenlos verwendbar, quelloffen entwickelt
-<center><img src="img/tesseract_github.png" width="800px"/></center>
-- Lizenzmodell erlaubt kommerziellen Einsatz
-    + (Teil-)Grund für Erfolg?
+- einfaches Webinterface zur OCR von Wikimedia-Inhalten
 
----
-
-# Texterkennung: Tesseract
-
-- Teil praktisch aller **Linux**distributionen
-    + Installation auf MacOS per `Homebrew` und `MacPorts` möglich
-    + Installation unter Windows per [Installer](https://github.com/UB-Mannheim/tesseract/wiki) möglich
-- Zugriff auf Tesseract per
-    + Programmierschnittstelle (API)
-    + **Kommandozeilenschnittstelle** (CLI)
-    + graphische Benutzeroberfläche (GUI, Drittanbieter)
-- Erkennunsgmodelle für zahlreiche Sprachen bzw. Schriften vorhanden
-    + teilweise als installierbare Pakete
-    + empfehlenswert jedoch Download von [GitHub](https://github.com/tesseract-ocr/tessdata_best)
-
----
-
-# Texterkennung: Tesseract
-
-- Prinzipielle Kommandostruktur
-```
-tesseract EINGABEBILD AUSGABE (OPTIONEN) (AUSGABEKONFIGURATION)
-```
-- einfachster Aufruf
-```
-$ tesseract sample.png -
-```
-    + `-` schickt die Ergebnisse nach `stdout`
-    + Modell `eng` per default ausgewählt
-    + Konfiguration `txt` per default ausgewählt
-
-.cols[
-.sixty[
-```
-The Quick Brown
-Fox Jumps Over
-The Lazy Dog
-```
-]
-.fourty[
 <center>
-<img src="img/sample.png" width="300px" />
-<p style="font-size:4pt;">Image by Peter J. Acklam, public domain</p>
+<img src="img/wikimedia.png" height="300px" />
 </center>
-]
-]
+
+→ [ocr-test.wmcloud.org](https://ocr-test.wmcloud.org/)
 
 ---
 
-# Texterkennung: Tesseract
+# OCR mit Wikimedia
 
-- Modellauswahl
-    + Option `-l MODELLNAME`, Datei `MODELLNAME.traineddata` nötig
-    + eventuell in Kombination mit `--tessdata-dir`
-    + Kombination mehrerer Modelle möglich:
-      `-l MODELLNAME+MODELLNAME2+MODELLNAME3`
-- Segmentierung
-    + Option `-psm MODUS` (Liste verfügbarer Optionen via `--help-psm`)
-    + Möglichkeit einzelne Absätze, Zeilen oder gar Wörter zu verarbeiten
-- Bildauflösung
-    + wichtiger Faktor für Ergebnisqualität
-    + idealerweise min. 300 dpi
-    + unter Umständen Teil der Metadaten, anonsten: `Warning: Invalid resolution 0 dpi. Using 70 instead.`
-    + manuell per `--dpi` setzbar
+Aufgabe
+- Suchen Sie sich ein [geeignetes Bild](https://upload.wikimedia.org/wikipedia/commons/0/0e/Weisse_Scherzhafte_Lieder_003.jpg) bei Wikimedia.Commons (Tipp: via Wikisource)!
+- Führen Sie eine OCR aus!
+- Kopieren Sie sich das Textresultat!
+- Führen Sie eine zweite OCR mit veränderten Parametern aus!
+- Kopieren Sie sich das Textresultat
+- Vergleichen Sie die Ergebnisse auf [diffchecker](https://www.diffchecker.com/)! Was fällt Ihnen alles auf?
 
+---
+
+# OCR mit Wikimedia
+
+<center>
+<img src="img/diff.png" height="400px" />
+</center>
 ---
 
 class: part-slide
