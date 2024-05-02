@@ -10,7 +10,7 @@ layout: true
       <td style="text-align:right"><a href="https://www.slub-dresden.de/">www.slub-dresden.de</a></td>
     </tr>
     <tr>
-      <td style="text-align:right">Referat Open Science</td>
+      <td style="text-align:right">Referat Digitale Objekte</td>
       <td />
     </tr>
   </table>
@@ -19,10 +19,10 @@ layout: true
 <div class="my-title-footer">
   <table>
     <tr>
-      <td style="text-align:left"><b>Kay-Michael Würzner</b></td>
+      <td style="text-align:left"><b>Robert Sachunsky</b></td>
     </tr>
     <tr>
-      <td style="text-align:left">Referat Open Science</td>
+      <td style="text-align:left">Referat Digitale Objekte</td>
     </tr>
     <tr>
       <td style="font-size:8pt"><b>3. Mai 2024</b></td>
@@ -38,24 +38,20 @@ layout: true
 class: title-slide
 count: false
 
-# Vom Textobjekt über digitale Volltexte zu Forschungsdaten
-## Digitalisierung, Annotation und Analyse
+# Vom Textobjekt zum maschinenlesbaren Volltext
 
 ---
 
 # Überblick
 
-- vom Textobjekt zum maschinenlesbaren Volltext
-    + am Beispiel Optical Character Recognition
-- vom maschinenlesbaren Volltext zum Forschungsdatum in der quantitativen Korpuslinguistik
-    + mit Hilfe automatischer Annotation zur quantitative Textanalyse
-
----
-
-class: part-slide
-count: false
-
-# Etappe 1: vom Textobjekt zum maschinenlesbaren Volltext
+- Belege als Forschungsgrundlage
+- Textdokumente als Belegquelle
+- Komponenten eines einfachen OCR-Workflows
+- Texterkennung: Zeichenorientierte Ansätze
+- Texterkennung: Zeilenorientierte Ansätze
+- Exkurs: Sequenzklassifikation
+- Texterkennung: Werkzeuge
+- Texterkennung: OCR mit Wikimedia
 
 ---
 
@@ -206,7 +202,7 @@ count: false
 
 ---
 
-# Textquellen
+# Textdokumente als Belegquelle
 
 - **Problem**: viele Dokumente nicht grundständig digital verfügbar
 - **Problem**: Digitalisierung ⇏ Texterfassung
@@ -219,7 +215,7 @@ count: false
 
 count: false
 
-# Textquellen
+# Textdokumente als Belegquelle
 
 - **Problem**: viele Dokumente nicht grundständig digital verfügbar
 - **Problem**: Digitalisierung ⇏ Texterfassung
@@ -232,7 +228,7 @@ count: false
 
 count: false
 
-# Textquellen
+# Textdokumente als Belegquelle
 
 - **Problem**: viele Dokumente nicht grundständig digital verfügbar
 - **Problem**: Digitalisierung ⇏ Texterfassung
@@ -246,7 +242,7 @@ count: false
 
 count: false
 
-# Textquellen
+# Textdokumente als Belegquelle
 
 - **Problem**: viele Dokumente nicht grundständig digital verfügbar
 - **Problem**: Digitalisierung ⇏ Texterfassung
@@ -712,14 +708,14 @@ count: false
 - einfaches Webinterface zur OCR von Wikimedia-Inhalten
 
 <center>
-<img src="img/wikimedia.png" height="300px" />
+<img src="https://github.com/wrznr/dhm-dk-ocr-2023/raw/master/img/wikimedia.png" height="300px" />
 </center>
 
 → [ocr-test.wmcloud.org](https://ocr-test.wmcloud.org/)
 
 ---
 
-# OCR mit Wikimedia
+# Texterkennung: OCR mit Wikimedia
 
 Aufgabe
 - Suchen Sie sich ein [geeignetes Bild](https://upload.wikimedia.org/wikipedia/commons/0/0e/Weisse_Scherzhafte_Lieder_003.jpg) bei Wikimedia.Commons (Tipp: via Wikisource)!
@@ -731,485 +727,11 @@ Aufgabe
 
 ---
 
-# OCR mit Wikimedia
+# Texterkennung: OCR mit Wikimedia
 
 <center>
 <img src="img/diff.png" height="400px" />
 </center>
----
-
-class: part-slide
-count: false
-
-# Etappe 2: vom maschinenlesbaren Volltext zum Forschungsdatum in der quantitativen Korpuslinguistik
-
----
-
-# Vom Beleg zu dessen Beforschung
-
-
-- systematische Auswertung von Textkorpora
-- **Close reading**: eigentlich grundlegende Methode der Literaturwissenschaft
-- seit Franco Morretti (2005) *Graphs, Maps, Trees*: Gegenüberstellung (manueller) *Einzelbelegauswertung* und
-der (automatischen) *Analyse großer Textmengen* (**Distant Reading**):
-> ... a little pact with the devil: we know how to read texts, now let’s learn how not to read them.
-- Erkenntnisgewinn durch **quantitative Textanalyse** ein großes Versprechen der *Digital Humanities*
-
----
-
-# Vom Beleg zu dessen Beforschung
-
-.center[<img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/flugzeug_vs_eisenbahn.svg" style="width:800px"/>]
-
----
-
-# Vom Beleg zu dessen Beforschung
-
-.center[<img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/kohl1.svg" style="width:800px"/>]
-
----
-
-# Vom Beleg zu dessen Beforschung
-
-.center[<img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/kohl.svg" style="width:800px"/>]
-
----
-
-# Linguistische Annotation
-
-- Aufgabe:
-    + Auszeichnung bestimmter linguistischer Eigenschaften
-    + Strukturierung und Anreicherung der Rohtexte
-        * bessere Durchsuchbarkeit
-        * einfachere Belegidentifikation
-        * moderne Korpuspräsentationsformen
-        * **quantitative Auswertungen**
-
-
-| Beispiel | | | | | |
-|------|----------|--------|-------|-------------|-------------------|
-| Rohtext | *Aerzte* | *ſind* | *des* | *HERRgotts* | *Menſchenflikker* |
-| Normalisiert | *Ärzte* | *sind* | *des* | *Herrgotts* | *Menschenflicker* |
-| Lemma | *Arzt* | *sein* | *die* | *Herrgott* | *Menschenflicker* | 
-| Tag | `NN` | `VAFIN` | `ART` | `NN` | `NN` |
-| Grammatik | `Subjekt` | `Prädikat` | `Objekt` | `Objekt` | `Objekt` |
-
----
-
-# Linguistische Annotation im Alltag
-
-<center>
-<img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/websiete.png" style="width:800px"/>
-</center>
-
----
-
-# Linguistische Annotation
-
-- Analysekette:
-    + Zerlegung des Fließtextes in Wörter und Sätze: **Tokenisierung**
-    + Bestimmung mgl. Grundformen der Wörter: **Lemmatisierung**
-    + (Normalisierung von Schreibungsvarianten: **Kanonisierung**)
-    + Bestimmung der tatsächlichen Wortart eines Wortes: **PoS-Tagging**
-    + Klassifizierung der Beziehungen der Wörter untereinander: **Dependenzparsing**
-    + Auszählen gemeinsamer Vorkommen von Wörtern bzw. Wortgruppen: **distributionelle Semantik**
-- vollautomatisch möglich (mit akzeptabler Qualität)
-- zwei grundsätzliche Ansätze der Modellierung:
-    + auf Basis manuell erstellter Beispiele **automatisch** induzierte Regeln
-    + auf Basis von Expertenwissen **manuell** erstellte Regeln
-
----
-
-# Exkurs: regelbasierte Modellierung
-
-- grundsätzliches Vorgehen der sog. *künstlichen Intelligenz* bis zum Informationszeitalter
-    + Hauch der Unwissenschaftlichkeit statistischer Verfahren
-    + besonders in der Sprachwissenschaft:
-    > It's true there's been a lot of work on trying to apply statistical models to various linguistic problems. I think there have been some successes, but a lot of failures. There is a notion of success ... which I think is novel in the history of science. It interprets success as approximating unanalyzed data. ([Chomsky 2011](https://www.youtube.com/watch?v=jgbCXBJTpjs))
-- Ziel Verständnis über kognitive Prozesse und die Entwicklung eines über Module hinweg interagierenden Gesamtkonstrukts menschlicher Sprachverarbeitung
-
----
-
-# Exkurs: regelbasierte Modellierung
-
-- Beispiel *morphologische Analyse*
-    + Bestimmung der **möglichen** Wortarten eines Wortes
-      ```
-      grünen ↦ {Verb, Adjektiv}
-      Müller ↦ {Substantiv, Eigenname}
-      ```
-    + Abbildung auf eine kanonische **Grundform** (*Lemma*)
-      ```
-      grünen  ↦ grün
-      Müllers ↦ Müller
-      ```
-    + Identifikation der beteiligten Wortbildungsprozesse
-      ```
-      Grünspan ↦ grün<A>#Span<N>
-      verirren ↦ ver<p>+irren<V>
-      ```
-- Verfahren des maschinellen Lernens (bisher) nicht geeignet (cf. e.g. [McCarthy et al. 2019](https://aclanthology.org/W19-4226v3.pdf))
-
----
-
-# Exkurs: regelbasierte Modellierung
-
-- herausfordernd für Sprachen mit komplexer Wortbildung (Kompetenz!)
-    + (mentales) Lexikon unendlicher Größe
-        * Dampfschifffahrtsgesellschaftskapitän
-        * Dampfschifffahrtsgesellschaftskapitänsmütze
-    + Belege? **Oftmals Fehlanzeige**
-- simple, beschreibende Regel: `NN → NN NN`
-- implementiert als `Finite State Morphology` [(Beesley und Karttunen 2003)](https://web.stanford.edu/~laurik/fsmbook/home.html)
-    + man nehme
-        * eine **große** Liste einfacher Wörter
-        * deren **morphosyntaktische** Eigenschaften
-        * Vor- und Nachsilben,
-    + packe dies in einen **endlichen Automaten** und
-    + bilde dessen **Kleenesche Hülle**
-
----
-
-# Exkurs: regelbasierte Modellierung
-
-- endlicher Automat: `\(\mathcal{A}=\{\Sigma,\Delta,Q,q_0,F,E\}\)`
-    + `\(\Sigma,\Delta\ldots\)` Ein- bzw. Ausgabealphabet
-    + `\(Q\ldots\)` Zustände, `\(F\subseteq Q\ldots\)` Endzustände, `\(q_0\in Q\ldots\)` Startzustand
-    + `\(E\ldots\)` Übergänge `\(\langle e_k, e_l, a, b\rangle\)`
-- Illustration `Finite State Morphology`
-    + Lexikon `{schön<A>,Geist<N>}`
-    + Vorsilben `{un<p>,ur<p>}`
-    + Nachsilben `{heit<N>,lich<A>}`
-
-<center><img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/morph_ex.svg"/></center>
-
----
-
-count: false
-
-# Exkurs: regelbasierte Modellierung
-
-- endlicher Automat: `\(\mathcal{A}=\{\Sigma,\Delta,Q,q_0,F,E\}\)`
-    + `\(\Sigma,\Delta\ldots\)` Ein- bzw. Ausgabealphabet
-    + `\(Q\ldots\)` Zustände, `\(F\subseteq Q\ldots\)` Endzustände, `\(q_0\in Q\ldots\)` Startzustand
-    + `\(E\ldots\)` Übergänge `\(\langle e_k, e_l, a, b\rangle\)`
-- Illustration `Finite State Morphology`
-    + Lexikon `{schön<A>,Geist<N>}`
-    + Vorsilben `{un<p>,ur<p>}`
-    + Nachsilben `{heit<N>,lich<A>}`
-
-<center><img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/morph_ex2.svg"/></center>
-
----
-
-count: false
-
-# Exkurs: regelbasierte Modellierung
-
-- endlicher Automat: `\(\mathcal{A}=\{\Sigma,\Delta,Q,q_0,F,E\}\)`
-    + `\(\Sigma,\Delta\ldots\)` Ein- bzw. Ausgabealphabet
-    + `\(Q\ldots\)` Zustände, `\(F\subseteq Q\ldots\)` Endzustände, `\(q_0\in Q\ldots\)` Startzustand
-    + `\(E\ldots\)` Übergänge `\(\langle e_k, e_l, a, b\rangle\)`
-- Illustration `Finite State Morphology`
-    + Lexikon `{schön<A>,Geist<N>}`
-    + Vorsilben `{un<p>,ur<p>}`
-    + Nachsilben `{heit<N>,lich<A>}`
-
-<center><img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/morph_ex3.svg" width="650" /></center>
-
----
-
-count: false
-
-# Exkurs: regelbasierte Modellierung
-
-- endlicher Automat: `\(\mathcal{A}=\{\Sigma,\Delta,Q,q_0,F,E\}\)`
-    + `\(\Sigma,\Delta\ldots\)` Ein- bzw. Ausgabealphabet
-    + `\(Q\ldots\)` Zustände, `\(F\subseteq Q\ldots\)` Endzustände, `\(q_0\in Q\ldots\)` Startzustand
-    + `\(E\ldots\)` Übergänge `\(\langle e_k, e_l, a, b\rangle\)`
-- Illustration `Finite State Morphology`
-    + Lexikon `{schön<A>,Geist<N>}`
-    + Vorsilben `{un<p>,ur<p>}`
-    + Nachsilben `{heit<N>,lich<A>}`
-
-<center><img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/morph_ex4.svg" width="880" /></center>
-
----
-
-count: false
-
-# Exkurs: regelbasierte Modellierung
-
-- endlicher Automat: `\(\mathcal{A}=\{\Sigma,\Delta,Q,q_0,F,E\}\)`
-    + `\(\Sigma,\Delta\ldots\)` Ein- bzw. Ausgabealphabet
-    + `\(Q\ldots\)` Zustände, `\(F\subseteq Q\ldots\)` Endzustände, `\(q_0\in Q\ldots\)` Startzustand
-    + `\(E\ldots\)` Übergänge `\(\langle e_k, e_l, a, b\rangle\)`
-- Illustration `Finite State Morphology`
-    + Lexikon `{schön<A>,Geist<N>}`
-    + Vorsilben `{un<p>,ur<p>}`
-    + Nachsilben `{heit<N>,lich<A>}`
-
-<center><img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/morph_ex6.svg" width="880" /></center>
-
----
-
-count: false
-
-# Exkurs: regelbasierte Modellierung
-
-- endlicher Automat: `\(\mathcal{A}=\{\Sigma,\Delta,Q,q_0,F,E\}\)`
-    + `\(\Sigma,\Delta\ldots\)` Ein- bzw. Ausgabealphabet
-    + `\(Q\ldots\)` Zustände, `\(F\subseteq Q\ldots\)` Endzustände, `\(q_0\in Q\ldots\)` Startzustand
-    + `\(E\ldots\)` Übergänge `\(\langle e_k, e_l, a, b\rangle\)`
-- Illustration `Finite State Morphology`
-    + Lexikon `{schön<A>,Geist<N>}`
-    + Vorsilben `{un<p>,ur<p>}`
-    + Nachsilben `{heit<N>,lich<A>}`
-
-<center><img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/morph_ex5.svg" width="880" /></center>
-
----
-
-# Exkurs: regelbasierte Modellierung
-
-- Herausforderungen
-    + Übergenerierung (z.B. *Geistgeist*)
-    + Regressionen (z.B. *Bonbon*)
-    + Komplexität, z.B. TAGH [(Geyken und Hanneforth 2005)](https://www.dwds.de/dwds_static/publications/text/Geyken_Hanneforth_fsmnlp.pdf)
-        * 1&#x202f;864&#x202f;991 Lexikoneinträge
-        * 7&#x202f;678 Vorsilben
-        * 1&#x202f;073 Nachsilben
-        * 2&#x202f;679&#x202f;741 Zustände
-    + Aufwand in Erstellung und Pflege
-- implizites vs. explizites Wissen
-
----
-
-# Linguistische Annotation
-
-.cols[
-.fifty[
-- Verdichtung, e.g.
-    + Flexion
-    + Schreibungsvariation
-    + für höhere **quantitative Aussagekraft**
-- Diskriminierung
-    + Ambiguitäten, z.B. bzgl. Wortart
-    + für höhere **qualitative Aussagekraft**
-- Hilfsmittel für **sauber(er)e Analysen**
-]
-.fifty[
-- auch auf anderen Ebenen (Phonologie, Syntax, formale Semantik)
-    + Grammatiken, Parser
-    + *Chomsky-Hierarchie* (u.a. [Chomsky 1959](https://www.sciencedirect.com/science/article/pii/S0019995859903626))
-<img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/kohl.svg" style="width:300px"/>
-]
-]
-
----
-
-# Linguistische Annotation: Werkzeuge
-
-- zwei wichtige Python-Bibliotheken
-    * `NLTK`: Sammlung vieler verschiedener Referenzimplementierungen **und** -Modellen
-        + begleited von (offenem) Lehrbuch: https://www.nltk.org/book/
-        + trainierbar
-    * `spaCy`: ein Tool pro Annotationsschritt auf Basis neuronaler Netze
-        + Modelle für viele Sprachen
-        + trainierbar
-```python
-import spacy
-nlp = spacy.load("en_core_web_sm")
-phrase = nlp("The old man the boat")
-for token in phrase
-  print(token.pos, token.lemma_)
-```
-
----
-
-# Distributionelle Semantik
-
-- Semantik: Theorie von der sprachlichen Bedeutung
-    + **lexikalische** Semantik: Wortbedeutungen
-    + **kompositionelle** Semantik: Phrasen- und Satzbedeutung
-    * **ontologische** Beziehungen: Synonyme, Hyponyme, Hyperonyme
-- mit automatischen Verfahren erfassbar
-- distributionelle Ähnlichkeit: gleiche Kontexte ⇒ ähnliche Bedeutung
-> You shall know a word by the company it keeps.
-> [(Firth 1957)](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf)
-    + `Er versenkte den .... im Tor.`
-
----
-
-count: false
-
-# Distributionelle Semantik
-
-- Semantik: Theorie von der sprachlichen Bedeutung
-    + **lexikalische** Semantik: Wortbedeutungen
-    + **kompositionelle** Semantik: Phrasen- und Satzbedeutung
-    * **ontologische** Beziehungen: Synonyme, Hyponyme, Hyperonyme
-- mit automatischen Verfahren erfassbar
-- distributionelle Ähnlichkeit: gleiche Kontexte ⇒ ähnliche Bedeutung
-> You shall know a word by the company it keeps.
-> [(Firth 1957)](https://cs.brown.edu/courses/csci2952d/readings/lecture1-firth.pdf)
-    + `Er versenkte den Ball im Tor.`
-
----
-
-# Distributionelle Semantik
-
-- Vorgehen:
-    + Man definiere einen **Kontext** (z.&#x202f;B. Satz) und **interessante** Wörter,
-    + werfe für jedes Zielwort alle interessanten Wörter (z.&#x202f;B. *Nomen* und *Verben*) aus dem Kontext in einen Topf (*Bag of Words*),
-    + repräsentiere den Topf als **hochdimensionalen Vektorraum** und
-    + vergleiche die Vektoren miteinander.
-- Illustration:
-    + `Der Säufer randalierte in der Kneipe. Die Polizei sperrte den Säufer ein, weil er randalierte.`
-.right[<img src="https://deutschestextarchiv.github.io/DWDS-Workshop-2018/figures/distr.svg" style="width:180px"/>]
-
----
-
-# Distributionelle Semantik
-
-- **Kollokation**: häufiges gemeinsames Auftreten zweier Wörter in vordefiniertem Kontext 
-    + enge semantische Beziehungen (*Schüler* → *Lehrer*) 
-    + Sachverhalte (*Schule* → *Reform*) 
-    + feste Phrasen (*Hänschen* → *Hans*)
-- **Annäherungen an die Verwendung eines Begriffes:**
-    + Ermittlung aller Kollokationen eines Eingabebegriffes
-    + Ordnung nach deren Assoziationsgrad zum Eingabebegriff
-    + Beispiel [*Begriff*](https://kaskade.dwds.de/dstar/dta/diacollo/?query=Begriff&_s=submit&date=&slice=0&score=ld&kbest=10&cutoff=&profile=2&format=html&global=1&groupby=&eps=0) im DTA
-
----
-
-# Distributionelle Semantik
-
-<center>
-<img src="https://famfonts.com/wp-content/uploads/jeopardy-wide.png">
-</center>
-
-.center[**↓**]
-
-<center>
-<img src="img/profilardy.png">
-</center>
-
-<center>
-<a href="https://docs.google.com/presentation/d/1qPfvBRmpPNAV6Y3zHGoYXAj-MuKy84E1ZJPvgMjwezA/edit?usp=sharing"><b>Klick mich!</b></a>
-</center>
-
----
-
-# Distributionelle Semantik
-
-.cols[
-.fifty[
-- **Spezifische Verwendung von Begriffen**:
-    + Diskriminierung von Kollokationen bzgl. syntaktischer Konstruktionsmuster
-    + `Kollokationen + Konstruktionsmuster = Wortprofil` <a href="https://pub.ids-mannheim.de/laufend/opal/pdf/opal2014-2.pdf#page=39">(Didakowski und Geyken 2014)</a>
-    + z.B. *verkünden* vs. *bekanntgeben*
-]
-.fifty[
-<img src="https://wrznr.github.io/CLARIN-Workshop-2018/figures/wp_vergleich.png" />
-]]
-
----
-
-# Distributionelle Semantik
-.cols[
-.fifty[
-<img src="img/beverages.png" /><p/>
-<a href="https://www.deutschestextarchiv.de/files/jw2017diacollo.pdf" style="font-size:1.1rem">(Jurish und Werneke 2017)</a>
-]
-.fifty[
-- **Annäherung an Bedeutungswandel eines Begriffes**:
-    + Ermittlung aller Kollokationen eines Eingabebegriffes **in definierten Zeitintervallen**
-    + `Kollokationen + Verlauskurven = DiaCollo` <a href="https://www.deutschestextarchiv.de/files/jurish2015diacollo-clarin.pdf">(Jurish 2015)</a>
-]]
-
----
-
-# Textbelege als Forschungsdaten
-
-Vorgehensweise
-
-- *explorativ*
-  + Wordstatistiken und Verlaufskurven
-  + signifikante Veränderungen im Inhaltswortbereich
-  + Hinweise auf Bedeutungsverschiebung bzw. Bezeichnungswandel
-
-- *hypothesengeleitet*
-  + spezifische Korpusrecherchen zur effizienten Belegauswahl
-  + Belegauswertung
-  + quantitatives „Untermauern“
-
----
-
-# Textbelege als Forschungsdaten
-
-Anwendungsbeispiel [(Jurish und Werneke 2017)](https://www.deutschestextarchiv.de/files/jw2017diacollo.pdf)
-
-- [*Krise* in DIE ZEIT](http://kaskade.dwds.de/dstar/zeit/diacollo/?q=Krise&d=1950%3A%2A&gb=l%2Cp%3DNE)
-    * 1950–1959: Nachwirkungen Berlinblockade
-    * 1960–1969: Streiks und Proteste gegen die Regierung in Frankreich
-    * 1970–1979: Rücktritte Nixon und Brandt, Revolution im Iran
-    * 1980–1989: Solidarność, Afghanistankrieg, Schmidt-Koaltion
-    * 1990–1999: Jugoslawien- und Kosovokrieg, Finanzkrisen in Asien
-    * 2000–2010: globale Finanz- und Wirtschaftskrise
-    * 2010–2019: Bürgerkriege in Syrien und der Ukraine, Finanzkrise in Griechenland
-- *Krise* in Neues Deutschland [anhand Eigennamen](https://kaskade.dwds.de/dstar/zeit/diacollo/?q=Krise&d=1950%3A%2A&gb=l%2Cp%3DNE) bzw. [Nomen](http://kaskade.dwds.de/dstar/nd/diacollo/?q=Krise&d=1950%3A%2A&sl=5&k=15&f=cld&gb=l%2Cp%3DNN)
-- [*Mann* vs. *Frau* im Deutschen Textarchiv (1600–1900)](http://kaskade.dwds.de/dstar/dta/diacollo/?q=Mann&bq=Frau&d=1600%3A1899&ds=25&gb=l%2Cp%3DADJA&f=html&p=d2)
-
----
-
-# Textbelege als Forschungsdaten
-
-> *„Unter dem Begriff des ‚blended reading‘ schlagen wir eine Strategie im Sinne einer Best Practise vor, die semiautomatische Analyseverfahren mit klassischer Textlektüre so integriert, dass sozialwissenschaftliche Erkenntnispotenziale, die sich auf die Auswertung großer Textdatenmengen stützen, optimal ausgeschöpft werden.“*<br />
-> [Stulpe und Lemke 2016](https://link.springer.com/chapter/10.1007/978-3-658-07224-7_2)
-
----
-
-class: part-slide
-count: false
-
-# Schlüsselbegriffe und zwei Empfehlungen
-
----
-
-# Schlüsselbegriffe
-
-- Texterfassung
-- Sequenzklassifikation
-- maschinenlesbarer Volltext
-- linguistische Annotation
-- regelbasierte Modellierung
-- distributionelle Semantik
-- *close, distant* und *blended reading*
-
----
-
-# Empfehlung 1: Ausprobieren!
-
-- jede Menge gute Tutorials und Vorlesungen im Netz
-- Was würde ich lernen?
-    + Kommandozeile
-    + Python
-    + LaTeX
-
-<center><img src="img/wissen.png" width="380" /></center>
-
----
-
-# Empfehlung 2: Kommen Sie ins Gespräch!
-
-- kleine Gruppe
-- gemeinsam Ausprobieren
-    + mehr Spaß
-    + weniger Frust
-- herzliche Einladung ins SLUB Open Science Lab (Zell21)
-
-<center><img src="https://www.slub-dresden.de/fileadmin/_processed_/b/a/csm_Zell21_71e9ec42ed.jpg" width="480" /></center>
 
 ---
 
@@ -1218,5 +740,5 @@ class: part-slide
 # Vielen Dank für Ihre Aufmerksamkeit!
 
 <center>
-<a href="https://wrznr.github.io/ringvorlesung-dh-2022/">wrznr.github.io/ringvorlesung-dh-2022</a>
+<a href="https://bertsky.github.io/ringvorlesung-dh-2024-ocr/">bertsky.github.io/ringvorlesung-dh-2024-ocr</a>
 </center>
