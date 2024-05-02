@@ -6,7 +6,7 @@ layout: true
   <table>
     <tr>
       <td style="text-align:right">Sächsische Landesbibliothek – Staats- und Universitätsbibliothek</td>
-      <td>23. Januar 2022</td>
+      <td>3. Mai 2024</td>
       <td style="text-align:right"><a href="https://www.slub-dresden.de/">www.slub-dresden.de</a></td>
     </tr>
     <tr>
@@ -25,7 +25,7 @@ layout: true
       <td style="text-align:left">Referat Open Science</td>
     </tr>
     <tr>
-      <td style="font-size:8pt"><b>23. Januar 2023</b></td>
+      <td style="font-size:8pt"><b>3. Mai 2024</b></td>
     </tr>
     <tr>
       <td style="font-size:8pt">Vorlesung <i>Information Retrieval</i></td>
@@ -198,7 +198,7 @@ count: false
 - *Korpora*: repräsentative Erfassung einer Sprache, eines Sprachstandes, eines speziellen Ausschnitts einer Sprache
     + Referenzkorpora
         * British National Corpus [(Leech 1992)](https://hdl.handle.net/10371/85926)
-            * Deutsches Textarchiv [(Geyken et al. 2011)](http://www.hbz-nrw.de/dokumentencenter/veroeffentlichungen/Tagung_Digitale_Wissenschaft.pdf#page=159)
+        * Deutsches Textarchiv [(Geyken et al. 2011)](http://www.hbz-nrw.de/dokumentencenter/veroeffentlichungen/Tagung_Digitale_Wissenschaft.pdf#page=159)
     + Spezialkorpora
         * *childLex* [(Schroeder et al. 2014)](https://link.springer.com/article/10.3758/s13428-014-0528-1)
         * Internetblogs [(Barbaresi und Würzner 2015)](https://edoc.bbaw.de/opus4-bbaw/frontdoor/index/index/docId/2330)
@@ -206,7 +206,7 @@ count: false
 
 ---
 
-# Dokumenttypen
+# Textquellen
 
 - **Problem**: viele Dokumente nicht grundständig digital verfügbar
 - **Problem**: Digitalisierung ⇏ Texterfassung
@@ -217,7 +217,9 @@ count: false
 
 ---
 
-# Dokumenttypen
+count: false
+
+# Textquellen
 
 - **Problem**: viele Dokumente nicht grundständig digital verfügbar
 - **Problem**: Digitalisierung ⇏ Texterfassung
@@ -228,7 +230,9 @@ count: false
 
 ---
 
-# Dokumenttypen
+count: false
+
+# Textquellen
 
 - **Problem**: viele Dokumente nicht grundständig digital verfügbar
 - **Problem**: Digitalisierung ⇏ Texterfassung
@@ -240,7 +244,9 @@ count: false
 
 ---
 
-# Dokumenttypen
+count: false
+
+# Textquellen
 
 - **Problem**: viele Dokumente nicht grundständig digital verfügbar
 - **Problem**: Digitalisierung ⇏ Texterfassung
@@ -479,7 +485,7 @@ count: false
 
 count: false
 
-# Texterkennung: Zeichenorientierte Ansätze
+# Texterkennung: <u>Zeichen</u>orientierte Ansätze
 
 .cols[
 .seventy[
@@ -491,14 +497,11 @@ count: false
 <center><img src="img/char.svg" width="300px" /></center>
 ]
 ]
-- *regelbasiertes Vorgehen*
-    + **direkte** Abbildung von Referenzmaterial
-    + Modellierung von Expertenwissen
 - Zerlegung der Seite in *Zeilen* und *Zeichen* notwendig
 
 ---
 
-# Texterkennung: Zeilenorientierte Ansätze
+# Texterkennung: <u>Zeilen</u>orientierte Ansätze
 
 - Erkennung erfolgt *zeilenweise*
   1. **Skalierung:** einheitliche Höhe für alle Zeilen
@@ -512,7 +515,7 @@ count: false
 
 ---
 
-# Texterkennung: Zeilenorientierte Ansätze
+# Texterkennung: <u>Zeilen</u>orientierte Ansätze
 
 - Sequenzierung per Vektorisierung
     + **Skalierung** auf einheitliche Höhe
@@ -530,7 +533,7 @@ count: false
 
 ---
 
-# Texterkennung: Zeilenorientierte Ansätze
+# Texterkennung: <u>Zeilen</u>orientierte Ansätze
 
 - Tabelle mit fester Anzahl Zeilen und variabler Anzahl Spalten
 - schwarze (1) und weiße (0) Pixel
@@ -678,12 +681,12 @@ count: false
         * regelbasierte Bildvorverarbeitung und Layouterkennung
         * datengetriebene Texterkennung (unterstützt > 100 Sprachen)
         * Ease-of-Use-Training eigener Modelle
-        * für OCR und **HTR** verwendbar
+        * für OCR (und HTR) verwendbar
     + [**OCRopy**](https://github.com/ocropus/ocropy): umfangreiches Open-Source-Paket
         * regelbasierte Bildvorverarbeitung und Layouterkennung
         * datengetriebene Texterkennung (nur sehr wenige Modelle vorhanden)
-        * für OCR und **HTR** verwendbar
-        * prominente Ableger: [**kraken**](https://kraken.re) und [**Calamari**](https://github.com/Calamari-OCR/calamari)
+        * für OCR (und HTR) verwendbar
+        * prominente Ableger: [**Kraken**](https://kraken.re) und [**Calamari**](https://github.com/Calamari-OCR/calamari)
     + [**OCR-D**](https://ocr-d.de/): Workflow-Engine
         * Orchestrierung verschiedener Open-Source-Pakete zu stabilen Workflows
         * gleichzeitig DFG-Förderprogramm zur Verbesserung von OCR für historische Drucke
