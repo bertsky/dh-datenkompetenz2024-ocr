@@ -45,11 +45,11 @@ count: false
 # Überblick
 
 - Belege als Forschungsgrundlage
-- Textdokumente als Belegquelle
+  + Textdokumente als Belegquelle
 - Komponenten eines einfachen OCR-Workflows
 - Texterkennung: Zeichenorientierte Ansätze
 - Texterkennung: Zeilenorientierte Ansätze
-- Exkurs: Sequenzklassifikation
+  + Exkurs: Sequenzklassifikation
 - Texterkennung: Werkzeuge
 - Texterkennung: OCR mit Wikimedia
 
