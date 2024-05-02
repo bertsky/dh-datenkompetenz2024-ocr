@@ -28,7 +28,7 @@ layout: true
       <td style="font-size:8pt"><b>3. Mai 2024</b></td>
     </tr>
     <tr>
-      <td style="font-size:8pt">Vorlesung <i>Information Retrieval</i></td>
+      <td style="font-size:8pt">Seminar <i>Datenkompetenz</i></td>
     </tr>
   </table>
 </div>
