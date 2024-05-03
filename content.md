@@ -740,5 +740,5 @@ class: part-slide
 # Vielen Dank für Ihre Aufmerksamkeit!
 
 <center>
-<a href="https://bertsky.github.io/ringvorlesung-dh-2024-ocr/">bertsky.github.io/ringvorlesung-dh-2024-ocr</a>
+<a href="https://bertsky.github.io/dh-datenkompetenz2024-ocr/">bertsky.github.io/dh-datenkompetenz2024-ocr</a>
 </center>
